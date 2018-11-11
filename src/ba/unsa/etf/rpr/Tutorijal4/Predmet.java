@@ -1,5 +1,7 @@
 package ba.unsa.etf.rpr.Tutorijal4;
 
+import org.junit.jupiter.api.Test;
+
 public class Predmet{
         private String nazivPredmeta;
         private final int maksBrojStudenata;
@@ -30,5 +32,4 @@ public class Predmet{
     public void setIzborni(boolean izborni) {
         this.izborni = izborni;
     }
-
 }

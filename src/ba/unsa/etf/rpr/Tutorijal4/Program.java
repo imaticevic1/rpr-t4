@@ -4,38 +4,31 @@ import java.util.ArrayList;
 
 public class Program {
     public static void main (String[] args){
-        ArrayList<Student> studenti = new ArrayList<Student>();
-        ArrayList<Predmet> predmeti = new ArrayList<Predmet>();
+        ArrayList<Student> st = new ArrayList<Student>();
+        
         Student s1 = new Student ("Ivan", "Maticevic", 1492);
         Student s2 = new Student ("Igor", "Roki", 89123);
         Student s3 = new Student ("Ana", "Anic", 2345);
         Student s4 = new Student ("Renato", "Radic", 2132);
-        Student s5 = new Student ("Mujo", "Mjic", 7696);
-        studenti.add(s1);
-        studenti.add(s2);
-        studenti.add(s3);
-        studenti.add(s4);
-        studenti.add(s5);
+        Student s5 = new Student ("Mujo", "Mujic", 7696);
+        st.add(s1);
+        st.add(s2);
+        st.add(s3);
+        st.add(s4);
+        st.add(s5);
+        ArrayList<Predmet> pred = new ArrayList<Predmet>();
         Predmet p1 = new Predmet ("RPR", 13, true);
         Predmet p2 = new Predmet ("SIS", 10, false);
-        Predmet p3 = new Predmet ("EMJ", 12, false);
-        Predmet p4 = new Predmet ("PLS", 10, false);
-        predmeti.add(p1);
-        predmeti.add(p2);
-        predmeti.add(p3);
-        predmeti.add(p4);
-        ArrayList<Upis> upisani = new ArrayList<Upis>();
-        Fakultet ETF = new Fakultet(studenti, predmeti, upisani);
-        ETF.upisiStudentaNaPredmet(s1,p1);
-        ETF.upisiStudentaNaPredmet(s5, p1);
-        ETF.upisiStudentaNaPredmet(s2,p4);
-        ETF.upisiStudentaNaPredmet(s3,p2);
-        ETF.upisiStudentaNaPredmet(s1,p2);
+        Predmet p3 = new Predmet ("EMJ", 10, false);
+
+        pred.add(p1);
+        pred.add(p2);
+        pred.add(p3);
+        //pred.add(p4);
+        ArrayList<Upis> up = new ArrayList<Upis>();
+        Fakultet ETF = new Fakultet(st, pred, up);
+        System.out.println(ETF.getSveStudente());
         ETF.ispisiSvePredmete();
-        System.out.println(ETF.getUpisaneStudente());
-        ETF.ispisiPredmeteUpisanogStudenta(s1);
-        ETF.ispisiStudentaSaPredmeta(s1,p1);
-        ETF.ispisiPredmeteUpisanogStudenta(s1);
-        System.out.println(ETF.getUpisaneStudente());
+
     }
 }
