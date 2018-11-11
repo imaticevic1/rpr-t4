@@ -32,4 +32,7 @@ public class Predmet{
     public void setIzborni(boolean izborni) {
         this.izborni = izborni;
     }
+    public String toString(){
+        return this.nazivPredmeta;
+    }
 }
