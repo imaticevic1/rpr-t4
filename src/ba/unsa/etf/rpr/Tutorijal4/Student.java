@@ -37,7 +37,7 @@ public class Student {
         public String toString(){
             return this.getIme() + " " + this.getPrezime() + " (" + this.getBrojIndeksa() + ")";
         }
-
-        public static void main(String[] args) {
-        }
+    public static void main (String[] args) {
     }
+
+}
